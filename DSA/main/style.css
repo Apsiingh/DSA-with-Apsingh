@@ -1,0 +1,57 @@
+
+body{  background-color: black;
+    padding: 5px;
+    color: azure;
+}
+h1{
+    color:yellow;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    color: red;
+    transition: .5s;
+}
+h3:hover{
+    background-color: yellow;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px red;;
+}
+.dsa-icon{
+   margin: 10px auto;
+  height: 250px;
+  width: 70%;
+  background-color: aqua;
+}
+.dsa-img{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.topic-container {
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.dsa-topic{
+    padding: 2px;
+    width: 50%;
+    margin:5px;
+    background-color: black;
+    border-radius: 10px 100px / 120px;
+    border: 2px solid rgb(104, 156, 19);
+    box-shadow: 1px 2px 2px red;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dsa-topic:hover{
+    background-color: rgb(59, 58, 58);
+    box-shadow: 2px 4px 4px red;
+}
+a{
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}

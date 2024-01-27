@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+.main{
+    padding: 20px;
+}
+hr{
+    padding: 0px;
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    color: yellow;
+    font-weight: 700;
+}
+.img-group{
+    display: flex;
+    justify-content: center;
+
+}
+.img-group .img{
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+}
+.question{
+  text-align: center;
+}
+.question:hover{
+    font-weight:600 ;
+    background-color: yellow;
+    transition: .6s;
+    color: black;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px red;
+}
+.ans1{
+    padding:20px ;
+    font-size: 20px;
+}
+.ans{
+    padding: 20px;
+}
+.ans ol{
+    margin-left: 10px;
+    padding-left: 20px;
+}
+.ans ol li{
+    font-size:20px ;
+}
+.ans ol li span{
+    color: yellow;
+}
+.typeofAlgoAna{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+.typeofAlgoAna a{
+    text-decoration: none;
+    align-items: center;
+    width: 80%;
+}
+
+.typeofAlgoAna button{
+    margin: 5px;
+    width: 100%;
+}
+
+.TimeAndSpaceImg{
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+ display: flex;
+ flex-direction: column;
+}
+.TimeAndSpaceImg .images {
+    height: 800px;
+    width: 90%;
+    margin: 5px;
+}
+.TimeAndSpaceImg .images .img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+     
+/* Expandable style */
+.extitle{
+    background-color:blue;
+    color:white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.8s;
+}
+.active,.extitle:hover {
+    background-color: #c52828;
+    color: white;
+  }
+.excontant{
+    padding: 0 18px;
+    background-color: rgb(0, 0, 0);
+    display: none;
+    overflow: hidden;
+    /* transition: 5s; */
+}
