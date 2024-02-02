@@ -141,11 +141,36 @@ hr{
   padding: 1rem;
   border-radius: 1rem;
 }
+.aproch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.aproch-content ul li{
+  text-align: left;
+}
+.aproch-img img{
 
-
-
-
-
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+h4{
+  color: red;
+  font-weight: 700;
+}
+.rain-water{
+  /* background-color: red; */
+  display: flex;
+  object-fit: cover;
+}
+.rain-water img{
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
 
 
 

@@ -134,25 +134,79 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23. <br>
        <div class="questions medium">
 
         <div class="question">
-          <button type="button" class="btn mid-title   ">Best Time to Buy and Sell Stock <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/" target="_blank"><img class="link-icon" src="../main/img/link.png"></a></button>
+          <button type="button" class="btn mid-title   "> Next permutation  <a href="https://leetcode.com/problems/next-permutation/description/" target="_blank"><img class="link-icon" src="../main/img/link.png"></a></button>
          <div class="question-summary">
-          You are given an array prices where <b >prices[i]</b> is the price of a given stock on the ith day.
-
-You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-
-Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+          Given an array arr[] of size N, the task is to print the lexicographically next greater permutation of the given array. If there does not exist any greater permutation, then print the lexicographically smallest permutation of the given array.
           <div class="example">
+            Example : 1 <br>
+            Input: N = 6, arr = {1, 2, 3, 6, 5, 4} <br>
+            Output: {1, 2, 4, 3, 5, 6} <br>
+            Explanation: The next permutation of the given array is {1, 2, 4, 3, 5, 6}. <br> <br>
+            
+            Example : 2 <br> 
+            Input: N = 3, arr = {3, 2, 1} <br>
+            Output: {1, 2, 3} <br>
+            Explanation: As arr[] is the last permutation.  <br>
+            So, the next permutation is the lowest one. <br>
 
-            Example 1: <br>
+          </div>
+         </div>
+
+         <!-- Answer -->
+
+         <div class="solution">
+
+          <button class="array-solution extitle" >
+            next permutation ( Solution )
+          </button>
+          <div class="code-content excontent">
+            <div class="aproch">
+              <div class="aproch-img">
+              <img src="./img/permutaionnext.png" >
+             </div>
+               <div class="aproch-content">
+                <ul>
+                  <li>Iterate over the given array from end and find the first index (pivot) which doesn’t follow property of non-increasing suffix, (i.e,  arr[i] < arr[i + 1]).</li>
+                  <li>Check if pivot index does not exist 
+                  </li>
+                  <li>This means that the given sequence in the array is the largest as possible. So, swap the complete array.</li>
+                  <li>Otherwise, Iterate the array from the end and find for the successor of pivot in suffix.</li>
+                  <li>Swap the pivot and successor</li>
+                  <li>Minimize the suffix part by reversing the array from pivot + 1 till N.</li>
+                </ul>
+               </div>
+            </div>
+            <div class="sol-img">
+              <img src="./img/next1.png" >
+              <img src="./img/next2.png" >
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <br>
+
+        <div class="question">
+          <button type="button" class="btn mid-title   ">Best Time to Buy and Sell Stock  <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/" target="_blank"><img class="link-icon" src="../main/img/link.png"></a></button>
+         <div class="question-summary">
+          You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+          You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+          
+          Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+          <div class="example">
+            Example : 1 <br>
             Input: prices = [7,1,5,3,6,4] <br>
             Output: 5 <br>
             Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5. <br>
             Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell. <br> <br>
-            Example 2: <br>
             
+            
+            Example : 2 <br> 
             Input: prices = [7,6,4,3,1] <br>
             Output: 0 <br>
             Explanation: In this case, no transactions are done and the max profit = 0. <br>
+            
 
           </div>
          </div>
@@ -165,25 +219,45 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
             Best Time to Buy and Sell Stock ( Solution )
           </button>
           <div class="code-content excontent">
+            <div class="aproch">
+               <div class="aproch-content">
+                <h4>Approach</h4>
+               <p>
+                To solve this problem, I employed a straightforward approach that iterates through the array of stock prices. At each step, I kept track of the minimum stock price seen so far (min_price) and calculated the potential profit that could be obtained by selling at the current price (prices[i] - min_price). I updated the maxprof (maximum profit) variable with the maximum of its current value and the calculated profit. Additionally, I updated the min_price to be the minimum of the current stock price and the previously seen minimum.
+               </p>
+               </div>
+            </div>
             <div class="sol-img">
-              <img src="./img/rainwater.png" alt="">
+              <img src="./img/buyandSell.png" >
             </div>
           </div>
         </div>
         </div>
-
         <br>
         <div class="question">
-          <button type="button" class="btn mid-title   ">Trapping Rain Water <a href="https://leetcode.com/problems/trapping-rain-water/description/" target="_blank"><img class="link-icon" src="../main/img/link.png"></a></button>
+          <button type="button" class="btn mid-title   ">Find Missing And Repeating
+            <a href="https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1" target="_blank"><img class="link-icon" src="../main/img/link.png"></a></button>
          <div class="question-summary">
-          <div><img src="./img/rainwate.png" > <br>
-          Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+          Given an unsorted array Arr of size N of positive integers. One number 'A' from set {1, 2,....,N} is missing and one number 'B' occurs twice in array. Find these two numbers.
           <div class="example">
-            Example 1: 
-           <img src="./" alt=""> <br>
-           Input: height = [0,1,0,2,1,0,1,3,2,1,2,1] <br>
-           Output: 6 <br>
-           Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. <br>
+            Example : 1 <br>
+            Input: <br>
+            N = 2 <br>
+            Arr[] = {2, 2} <br>
+            Output: 2 1 <br>
+            Explanation: Repeating number is 2 and 
+            smallest positive missing number is 1.<br> <br>
+            
+            
+            Example : 2 <br> 
+            Input: <br>
+            N = 3 <br>
+            Arr[] = {1, 3, 3} <br>
+            Output: 3 2 <br>
+            Explanation: Repeating number is 3 and 
+            smallest positive missing number is 2. <br>
+            
+
           </div>
          </div>
 
@@ -192,15 +266,84 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
          <div class="solution">
 
           <button class="array-solution extitle" >
-            Trapping Rain Water  ( Solution )
+            Find Missing And Repeating ( Solution )
           </button>
           <div class="code-content excontent">
+            <div class="aproch">
+               <div class="aproch-content">
+                <h4>Approach</h4>
+                <ul>
+                  <li>Create a temp array temp[] of size n with all initial values as 0.</li>
+                  <li>Traverse the input array arr[], and do the following for each arr[i] 
+                    <ul>
+                      <li>
+                      if(temp[arr[i]-1] == 0), set temp[arr[i]-1] = 1;
+                    </li>
+                    <li>
+                      if(temp[arr[i]-1] == 1) output “arr[i]” //repeating number
+                    </li>
+                  </ul>
+                  <li>Traverse temp[] and output ‘i+1’ corresponding to the element of array temp[] having value as 0. (This is the missing number)</li>
+                </ul>
+               </div>
+            </div>
             <div class="sol-img">
-              <img src="./img/rainwatersolution.png" alt="">
+              <img src="./img/missingAndRepeating.png" >
             </div>
           </div>
         </div>
         </div>
+        <br>
+        <div class="question">
+          <button type="button" class="btn mid-title   ">Trapping Rain Water
+            <a href="https://leetcode.com/problems/trapping-rain-water/description/" target="_blank"><img class="link-icon" src="../main/img/link.png"></a></button>
+         <div class="question-summary">
+          <div class="rain-water"> 
+          <img src="./img/rainwate.png">
+        </div>
+          Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+          <div class="example">
+            Example : 1 <br>
+            Input: <br>
+            N = 2 <br>
+            Arr[] = {2, 2} <br>
+            Output: 2 1 <br>
+            Explanation: Repeating number is 2 and 
+            smallest positive missing number is 1.<br> <br>
+            
+            
+            Example : 2 <br> 
+            Input: <br>
+            N = 3 <br>
+            Arr[] = {1, 3, 3} <br>
+            Output: 3 2 <br>
+            Explanation: Repeating number is 3 and 
+            smallest positive missing number is 2. <br>
+            
+
+          </div>
+         </div>
+
+         <!-- Answer -->
+
+         <div class="solution">
+
+          <button class="array-solution extitle" >
+            Find Missing And Repeating ( Solution )
+          </button>
+          <div class="code-content excontent">
+            <div class="aproch">
+               <div class="aproch-content">
+                
+               </div>
+            </div>
+            <div class="sol-img">
+              <img src="./img/rainwatersolution.png" >
+            </div>
+          </div>
+        </div>
+        </div>
+        
 
 
        </div>
